@@ -1,4 +1,4 @@
-# STMicroelectronics NUCLEO-H743ZI
+# STMicroelectronics NUCLEO-F756ZG
 
 ## Overview
 
@@ -24,18 +24,18 @@ The STM32 Nucleo-144 board comes with the STM32 comprehensive free software libr
 
 ## Schematics
 
-- [NUCLEO-H743ZI board schematic](https://www.st.com/resource/en/schematic_pack/mb1364-h743zi-c01_schematic.pdf)
+- [NUCLEO-F756ZG board schematic](https://www.st.com/resource/en/schematic_pack/nucleo_144pins_sch.zip)
 
 ## CMSIS-Drivers
 
-This board support pack contains a CMSIS-Driver for the [VIO](https://arm-software.github.io/CMSIS_5/develop/Driver/html/group__vio__interface__gr.html) interface. This is a virtual I/O abstraction for peripherals that are typically used in example projects. The **Blinky** example uses this interface to create a blinking light with the USER LED mounted on the board that can be controlled by the **Button USER**.
+This board support pack contains a CMSIS-Driver for the [VIO](https://arm-software.github.io/CMSIS_6/latest/Driver/group__gpio__interface__gr.html) interface. This is a virtual I/O abstraction for peripherals that are typically used in example projects. The **Blinky** example uses this interface to create a blinking light with the USER LED mounted on the board that can be controlled by the **Button USER**.
 
-Virtual Resource  | Variable       | Physical Resource on NUCLEO-H743ZI             |
+Virtual Resource  | Variable       | Physical Resource on NUCLEO-F756ZG             |
 :-----------------|:---------------|:-----------------------------------------------|
 vioBUTTON0        | vioSignalIn.0  | GPIO C.13: Button USER                         |
 vioLED0           | vioSignalOut.0 | GPIO B.14: LD3 RED                             |
 vioLED1           | vioSignalOut.1 | GPIO B.0:  LD1 GREEN                           |
-vioLED2           | vioSignalOut.2 | GPIO E.1:  LD2 YELLOW                          |
+vioLED2           | vioSignalOut.2 | GPIO B.7:  LD2 BLUE                            |
 
 Refer to the [schematics](#schematics) for board connection information.
 
