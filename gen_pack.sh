@@ -65,7 +65,7 @@ PACK_BASE_FILES="
 #
 PACKCHK_DEPS="
   ARM.CMSIS.pdsc
-  Keil.STM32H7xx_DFP.pdsc
+  Keil.STM32F7xx_DFP.pdsc
 "
 
 # Optional: restrict fallback modes for changelog generation
