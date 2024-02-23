@@ -47,7 +47,7 @@ vioLED2           | vioSignalOut.2 | GPIO B.7:  LD2 BLUE                        
 #include CMSIS_device_header
 
 #if !defined CMSIS_VOUT || !defined CMSIS_VIN
-#include "stm32f7xx_nucleo.h"
+#include "stm32f7xx_nucleo_144.h"
 #endif
 
 // VIO input, output definitions
