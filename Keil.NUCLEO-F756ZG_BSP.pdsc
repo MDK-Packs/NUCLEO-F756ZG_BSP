@@ -2,13 +2,19 @@
 <package schemaVersion="1.7.28" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Open-CMSIS-Pack/Open-CMSIS-Pack-Spec/v1.7.28/schema/PACK.xsd">
   <name>NUCLEO-F756ZG_BSP</name>
   <vendor>Keil</vendor>
-  <description>STMicroelectronics STM32H7 Series NUCLEO-F756ZG Board Support Pack</description>
+  <description>STMicroelectronics STM32F7 Series NUCLEO-F756ZG Board Support Pack</description>
   <url>https://github.com/MDK-Packs/Pack/raw/master/NUCLEO-F756ZG_BSP/</url>
   <repository type="git">https://github.com/MDK-Packs/NUCLEO-F756ZG_BSP.git</repository>
   <license>LICENSE</license>
 
   <releases>
-   <release version="1.0.0" date="2024-02-15">
+   <release version="1.0.0-dev1">
+      Synchronize with Keil:STM32F7xx_DFP.2.16.0
+      Drivers:
+      - Board Drivers
+      - CMSIS-Driver VIO (API 1.0.0)
+    </release>
+   <release version="1.0.0-dev0">
       Initial release
     </release>
   </releases>
@@ -38,8 +44,8 @@
       <description>STMicroelectronics NUCLEO-F756ZG BSP</description>
       <require condition="STM32F756"/>
       <require Cclass="Device" Cgroup="STM32Cube HAL" Csub="Common"/>
-      <require Cclass="Device" Cgroup="STM32Cube HAL" Csub="GPIO"/>
       <require Cclass="Device" Cgroup="STM32Cube HAL" Csub="EXTI"/>
+      <require Cclass="Device" Cgroup="STM32Cube HAL" Csub="GPIO"/>
       <require Cclass="Device" Cgroup="STM32Cube HAL" Csub="UART"/>
     </condition>
     <condition id="NUCLEO-F756ZG VIO">
@@ -56,15 +62,14 @@
       <component Cgroup="Drivers" Csub="Basic I/O" condition="NUCLEO-F756ZG BSP">
         <description>LEDs, push-buttons and COM ports for NUCLEO-F756ZG Board</description>
         <files>
-          <file category="header" name="Drivers/Config/stm32h7xx_nucleo_conf.h" attr="config" version="1.0.0"/>
-          <file category="header" name="Drivers/STM32H7xx_Nucleo/stm32h7xx_nucleo.h"/>
-          <file category="source" name="Drivers/STM32H7xx_Nucleo/stm32h7xx_nucleo.c"/>
+          <file category="header" name="Drivers/STM32F7xx_Nucleo_144/stm32f7xx_nucleo_144.h"/>
+          <file category="source" name="Drivers/STM32F7xx_Nucleo_144/stm32f7xx_nucleo_144.c"/>
         </files>
       </component>
     </bundle>
 
     <!-- VIO component for NUCLEO-F756ZG -->
-    <component Cclass="CMSIS Driver" Cgroup="VIO" Csub="Board" Cvariant= "NUCLEO-F756ZG" Cversion="1.0.1" Capiversion="0.1.0"   condition="NUCLEO-F756ZG VIO">
+    <component Cclass="CMSIS Driver" Cgroup="VIO" Csub="Board" Cvariant= "NUCLEO-F756ZG" Cversion="1.0.0" Capiversion="1.0.0"   condition="NUCLEO-F756ZG VIO">
       <description>Virtual I/O implementation for NUCLEO-F756ZG</description>
       <RTE_Components_h>
         #define RTE_VIO_BOARD
@@ -78,7 +83,7 @@
 
   <boards>
     <!-- NUCLEO-F756ZG Board Support -->
-    <board vendor="STMicroelectronics" name="NUCLEO-F756ZG" revision="Rev.E"
+    <board vendor="STMicroelectronics" name="NUCLEO-F756ZG" revision="Rev.B"
            salesContact="https://www.st.com/content/st_com/en/contact-us.html"
            orderForm   ="https://www.st.com/en/evaluation-tools/nucleo-f756Zg.html">
       <description>STM32 Nucleo development board with STM32F756 MCU</description>
