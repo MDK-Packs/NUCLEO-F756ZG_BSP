@@ -21,6 +21,14 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "cmsis_os2.h"
+#include "RTE_Components.h"
+#ifdef    RTE_VIO_BOARD
+#include "cmsis_vio.h"
+#endif
+#if defined(RTE_Compiler_EventRecorder)
+#include "EventRecorder.h"
+#endif
 
 /* USER CODE END Includes */
 
@@ -57,7 +65,35 @@ static void MX_USART3_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+/**
+  * Override default HAL_GetTick function
+  */
+uint32_t HAL_GetTick (void) {
+  static uint32_t ticks = 0U;
+         uint32_t i;
 
+  if (osKernelGetState () == osKernelRunning) {
+    return ((uint32_t)osKernelGetTickCount());
+  }
+
+  /* If Kernel is not running wait approximately 1 ms then increment 
+     and return auxiliary tick counter value */
+  for (i = (SystemCoreClock >> 14U); i > 0U; i--) {
+    __NOP(); __NOP(); __NOP(); __NOP(); __NOP(); __NOP();
+    __NOP(); __NOP(); __NOP(); __NOP(); __NOP(); __NOP();
+  }
+  return ++ticks;
+}
+
+/**
+  * Override default HAL_InitTick function
+  */
+HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority) {
+  
+  UNUSED(TickPriority);
+
+  return HAL_OK;
+}
 /* USER CODE END 0 */
 
 /**
@@ -90,6 +126,19 @@ int main(void)
   MX_GPIO_Init();
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
+#ifdef RTE_VIO_BOARD
+  vioInit();
+#endif
+
+#if defined(RTE_Compiler_EventRecorder) && \
+    (defined(__MICROLIB) || \
+    !(defined(RTE_CMSIS_RTOS2_RTX5) || defined(RTE_CMSIS_RTOS2_FreeRTOS)))
+  EventRecorderInitialize(EventRecordAll, 1U);
+#endif
+
+  osKernelInitialize();                         /* Initialize CMSIS-RTOS2 */
+  app_initialize();                             /* Initialize application */
+  osKernelStart();                              /* Start thread execution */
 
   /* USER CODE END 2 */
 
