@@ -8,7 +8,11 @@
   <license>LICENSE</license>
 
   <releases>
-     <release version="1.0.0-dev2">
+    <release version="1.0.0-dev3">
+      Example project:
+      - Moved to csolution (CMSIS-Toolbox)
+    </release>
+    <release version="1.0.0-dev2">
       Example project:
       - Update files generated with CubeMx
     </release>
@@ -119,7 +123,7 @@
       <description>CMSIS-RTOS2 Blinky example with VIO</description>
       <board name="NUCLEO-F756ZG" vendor="STMicroelectronics"/>
       <project>
-        <environment name="uv" load="Blinky.uvprojx"/>
+        <environment name="csolution" load="Blinky.csolution"/>
       </project>
       <attributes>
         <component Cclass="CMSIS" Cgroup="CORE"/>
