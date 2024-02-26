@@ -8,6 +8,10 @@
   <license>LICENSE</license>
 
   <releases>
+     <release version="1.0.0-dev2">
+      Example project:
+      - Update files generated with CubeMx
+    </release>
    <release version="1.0.0-dev1">
       Synchronize with Keil:STM32F7xx_DFP.2.16.0
       Drivers:
@@ -126,19 +130,5 @@
       </attributes>
     </example>
 
-    <example name="Platform" doc="README.md" folder="Projects/Platform">
-      <description>CMSIS-RTOS2 Platform example with VIO</description>
-      <board name="NUCLEO-F756ZG" vendor="STMicroelectronics"/>
-      <project>
-        <environment name="uv" load="Platform.uvprojx"/>
-      </project>
-      <attributes>
-        <component Cclass="CMSIS" Cgroup="CORE"/>
-        <component Cclass="Device" Cgroup="Startup"/>
-        <component Cclass="CMSIS" Cgroup="RTOS"/>
-        <component Cclass="CMSIS Driver" Cgroup="VIO"/>
-        <category>Getting Started</category>
-      </attributes>
-    </example>
   </examples>
 </package>

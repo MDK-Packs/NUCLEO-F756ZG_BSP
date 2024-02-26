@@ -22,7 +22,7 @@
   </DaveTm>
 
   <Target>
-    <TargetName>NUCLEO-H743ZI</TargetName>
+    <TargetName>NUCLEO-F756ZG</TargetName>
     <ToolsetNumber>0x4</ToolsetNumber>
     <ToolsetName>ARM-ADS</ToolsetName>
     <TargetOption>
@@ -119,54 +119,29 @@
       <TargetDriverDllRegistry>
         <SetRegEntry>
           <Number>0</Number>
-          <Key>EVENTREC_CNF</Key>
-          <Name>-l0 -a1 -s0 -f0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</Name>
-        </SetRegEntry>
-        <SetRegEntry>
-          <Number>0</Number>
-          <Key>ARMRTXEVENTFLAGS</Key>
-          <Name>-L70 -Z18 -C0 -M0 -T1</Name>
-        </SetRegEntry>
-        <SetRegEntry>
-          <Number>0</Number>
-          <Key>DLGTARM</Key>
-          <Name>(1010=-1,-1,-1,-1,0)(6017=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(6016=-1,-1,-1,-1,0)(1012=-1,-1,-1,-1,0)</Name>
-        </SetRegEntry>
-        <SetRegEntry>
-          <Number>0</Number>
-          <Key>ARMDBGFLAGS</Key>
-          <Name></Name>
-        </SetRegEntry>
-        <SetRegEntry>
-          <Number>0</Number>
-          <Key>DLGUARM</Key>
-          <Name>(105=-1,-1,-1,-1,0)</Name>
-        </SetRegEntry>
-        <SetRegEntry>
-          <Number>0</Number>
           <Key>ST-LINKIII-KEIL_SWO</Key>
-          <Name>-U0043003D3438510C34313939 -O2254 -SF400000 -C0 -A0 -I0 -HNlocalhost -HP7184 -P1 -N00("ARM CoreSight SW-DP (ARM Core") -D00(6BA02477) -L00(0) -TO131090 -TC400000000 -TT10000000 -TP21 -TDS8021 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO7 -FD20000000 -FC8000 -FN1 -FF0STM32H7x_2048.FLM -FS08000000 -FL0200000 -FP0($$Device:STM32H743ZITx$CMSIS\Flash\STM32H7x_2048.FLM)</Name>
+          <Name>-U -O2254 -SF10000 -C0 -A0 -I0 -HNlocalhost -HP7184 -P1 -N00("") -D00(00000000) -L00(0) -TO131090 -TC10000000 -TT10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO15 -FD20010000 -FC1000 -FN2 -FF0STM32F7x_1024.FLM -FS08000000 -FL0100000 -FP0($$Device:STM32F756ZGTx$CMSIS\Flash\STM32F7x_1024.FLM) -FF1STM32F7xTCM_1024.FLM -FS1200000 -FL1100000 -FP1($$Device:STM32F756ZGTx$CMSIS\Flash\STM32F7xTCM_1024.FLM) -WA0 -WE0 -WVCE4 -WS2710 -WM0 -WP2 -WK0</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
           <Key>UL2CM3</Key>
-          <Name>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC8000 -FN1 -FF0STM32H7x_2048 -FS08000000 -FL0200000 -FP0($$Device:STM32H743ZITx$CMSIS\Flash\STM32H7x_2048.FLM))</Name>
+          <Name>UL2CM3(-S0 -C0 -P0 -FD20010000 -FC1000 -FN2 -FF0STM32F7x_1024 -FS08000000 -FL0100000 -FF1STM32F7xTCM_1024 -FS1200000 -FL1100000 -FP0($$Device:STM32F756ZGTx$CMSIS\Flash\STM32F7x_1024.FLM) -FP1($$Device:STM32F756ZGTx$CMSIS\Flash\STM32F7xTCM_1024.FLM))</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
       <Breakpoint/>
       <ScvdPack>
-        <Filename>C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Driver\VIO\cmsis_vio.scvd</Filename>
-        <Type>ARM.CMSIS.5.8.0</Type>
+        <Filename>C:\Keil_v5\ARM\PACK\ARM\CMSIS-RTX\5.8.0\RTX5.scvd</Filename>
+        <Type>ARM::CMSIS-RTX@5.8.0</Type>
         <SubType>1</SubType>
       </ScvdPack>
       <ScvdPack>
-        <Filename>C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\RTOS2\RTX\RTX5.scvd</Filename>
-        <Type>ARM.CMSIS.5.8.0</Type>
+        <Filename>C:\Keil_v5\ARM\PACK\ARM\CMSIS-View\1.1.0\EventRecorder\EventRecorder.scvd</Filename>
+        <Type>ARM::CMSIS-View@1.1.0</Type>
         <SubType>1</SubType>
       </ScvdPack>
       <ScvdPack>
-        <Filename>C:\Keil_v5\ARM\PACK\Keil\ARM_Compiler\1.7.1\EventRecorder.scvd</Filename>
-        <Type>Keil.ARM_Compiler.1.7.1</Type>
+        <Filename>C:\Keil_v5\ARM\PACK\ARM\CMSIS\6.0.0\CMSIS\Driver\VIO\cmsis_vio.scvd</Filename>
+        <Type>ARM::CMSIS@6.0.0</Type>
         <SubType>1</SubType>
       </ScvdPack>
       <Tracepoint>
@@ -175,12 +150,12 @@
       <DebugFlag>
         <trace>0</trace>
         <periodic>1</periodic>
-        <aLwin>1</aLwin>
+        <aLwin>0</aLwin>
         <aCover>0</aCover>
         <aSer1>0</aSer1>
         <aSer2>0</aSer2>
         <aPa>0</aPa>
-        <viewmode>1</viewmode>
+        <viewmode>0</viewmode>
         <vrSel>0</vrSel>
         <aSym>0</aSym>
         <aTbox>0</aTbox>
@@ -216,7 +191,7 @@
         <EnableFlashSeq>0</EnableFlashSeq>
         <EnableLog>0</EnableLog>
         <Protocol>2</Protocol>
-        <DbgClock>400000000</DbgClock>
+        <DbgClock>10000000</DbgClock>
       </DebugDescription>
     </TargetOption>
   </Target>
@@ -254,7 +229,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\STM32CubeMX\STCubeGenerated\Src\main.c</PathWithFileName>
+      <PathWithFileName>.\RTE\Device\STM32F756ZGTx\STCubeGenerated\Src\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -266,8 +241,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\STM32CubeMX\STCubeGenerated\Inc\stm32h7xx_it.h</PathWithFileName>
-      <FilenameWithoutPath>stm32h7xx_it.h</FilenameWithoutPath>
+      <PathWithFileName>.\RTE\Device\STM32F756ZGTx\STCubeGenerated\Inc\stm32f7xx_it.h</PathWithFileName>
+      <FilenameWithoutPath>stm32f7xx_it.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -278,8 +253,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\STM32CubeMX\STCubeGenerated\Src\stm32h7xx_it.c</PathWithFileName>
-      <FilenameWithoutPath>stm32h7xx_it.c</FilenameWithoutPath>
+      <PathWithFileName>.\RTE\Device\STM32F756ZGTx\STCubeGenerated\Src\stm32f7xx_it.c</PathWithFileName>
+      <FilenameWithoutPath>stm32f7xx_it.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -298,7 +273,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\STM32CubeMX\STCubeGenerated\STCubeGenerated.ioc</PathWithFileName>
+      <PathWithFileName>.\RTE\Device\STM32F756ZGTx\STCubeGenerated\STCubeGenerated.ioc</PathWithFileName>
       <FilenameWithoutPath>STCubeGenerated.ioc</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -350,7 +325,7 @@
   </Group>
 
   <Group>
-    <GroupName>::Compiler</GroupName>
+    <GroupName>::CMSIS-View</GroupName>
     <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
