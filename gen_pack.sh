@@ -46,9 +46,9 @@ PACK_BASE_FILES="
 # Specify file names to be deleted from pack build directory
 # Default: empty
 #
-# PACK_DELETE_FILES="
-#   <list files here>
-# "
+PACK_DELETE_FILES="
+  gen_pack.sh
+"
 
 # Specify patches to be applied
 # Default: empty
