@@ -1,9 +1,0 @@
-build-idx:
-  generated-by: csolution version 2.2.1
-  csolution: Blinky.csolution.yml
-  cprojects:
-    - cproject: Blinky.cproject.yml
-  cbuilds:
-    - cbuild: Blinky+NUCLEOF756ZG.cbuild.yml
-      project: Blinky
-      configuration: +NUCLEOF756ZG

@@ -8,6 +8,10 @@ The STM32 Nucleo-144 board does not require any separate probe as it integrates 
 
 The STM32 Nucleo-144 board comes with the STM32 comprehensive free software libraries and examples available with the STM32Cube MCU Package.
 
+## Example project
+
+An example project using this board support pack ia available on [GitHub](https://github.com/Arm-Examples/Blinky_NUCLEO-F756ZG). It can also be accessed from the [NUCLEO-F756ZG page](https://www.keil.arm.com/boards/stmicroelectronics-nucleo-f756zg-revb-2251244/projects/).
+
 ## Board pinout
 
 ![Pins legend](9723438345ef395ca77763235ed6b86ee4b49b46.png)
